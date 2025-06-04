@@ -43,8 +43,6 @@ class CoverageService:
             query = query.where(EventRoute.evento == event_id)
 
         all_event_routes_processed = []
-        # El resto del método calculate_coverage_for_event es el mismo que te di anteriormente
-        # ... (código restante sin cambios) ...
 
         for er_data_row in query.dicts().iterator():
             demanda_estimada = float(er_data_row['demanda_estimada']) if isinstance(er_data_row['demanda_estimada'],
